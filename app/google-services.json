@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "204065021794",
+    "firebase_url": "https://mycycleway-d7e50.firebaseio.com",
+    "project_id": "mycycleway-d7e50",
+    "storage_bucket": "mycycleway-d7e50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204065021794:android:901699f9d56fde30",
+        "android_client_info": {
+          "package_name": "com.example.prime.mycycleway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204065021794-1ccj3tec5a593ka921s7j82l55pjm4ov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlJoISrclNmnWSv1fxwu8ySMmN51rFMxU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204065021794:android:330e6fc9b5fbd403",
+        "android_client_info": {
+          "package_name": "com.example.prime.mycyclewaynew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204065021794-fac65851s1du4qnp2gq3kqg4bv8i42cr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.prime.mycyclewaynew",
+            "certificate_hash": "b3d6ba9af309e782db3bcb99ab9b06589dbd2163"
+          }
+        },
+        {
+          "client_id": "204065021794-1ccj3tec5a593ka921s7j82l55pjm4ov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlJoISrclNmnWSv1fxwu8ySMmN51rFMxU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204065021794-1ccj3tec5a593ka921s7j82l55pjm4ov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
