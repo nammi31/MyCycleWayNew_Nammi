@@ -7,134 +7,82 @@
     android:background="@color/LetsGoBackground"
     tools:context="com.example.prime.mycyclewaynew.Authentications.UserAccount">
 
-    <LinearLayout
-
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/welcomeBackgrround"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/EmailET2"
-            style="@android:style/Widget.EditText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Email Address"
-            android:inputType="textEmailAddress" />
-    </LinearLayout>
 
-    <LinearLayout
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/welcomeBackgrround"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
 
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/welcomeBackgrround"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.766">
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/userImage"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="11dp"
+            android:layout_toEndOf="@+id/userImage"
+            android:hint="UserName"
+            android:textSize="22sp" />
 
-        <EditText
-            android:id="@+id/CpassET2"
+        <TextView
+            android:id="@+id/EmailTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nameTV"
+            android:layout_below="@+id/nameTV"
+            android:layout_marginTop="17dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Confirm Password"
-            android:inputType="textPassword" />
-    </LinearLayout>
+            android:layout_below="@+id/userImage"
+            android:layout_toEndOf="@+id/userImage"
+            android:text="Places"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/welcomeBackgrround"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629">
-
-        <EditText
-            android:id="@+id/PassET2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword" />
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/welcomeBackgrround"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349">
-
-
-        <EditText
-            android:id="@+id/nameEditText2"
+        <ListView
+            android:id="@+id/placesList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="User Name"
-            android:inputType="textPersonName"
-            android:textSize="18sp" />
-    </LinearLayout>
+            android:layout_alignStart="@+id/userImage"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="12dp" />
 
-    <Button
-        android:id="@+id/btnSignIn2"
-        android:layout_width="wrap_content"
-        android:layout_height="37dp"
+        <Button
+            android:id="@+id/editbtn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView3"
+            android:layout_alignParentEnd="true"
+            android:text="Edit"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+    </RelativeLayout>
 
-        android:layout_centerHorizontal="true"
-        android:background="@color/welcomeBackgrround"
-        android:text="Edit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="139dp"
-        android:layout_height="139dp"
-        android:background="@color/welcomeBackgrround"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
-
-    <ProgressBar
-        android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.016" />
 
 
 </android.support.constraint.ConstraintLayout>
+
+
+
+
+

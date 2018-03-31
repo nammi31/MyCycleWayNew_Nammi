@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.prime.mycyclewaynew.MainActivity;
+import com.example.prime.mycyclewaynew.Maps.MapsActivity;
 import com.example.prime.mycyclewaynew.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,34 +31,25 @@ public class loginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         login=(Button)findViewById( R.id.loginBtn);
-        showpass=(Button)findViewById( R.id.showpassbtn);
+//        showpass=(Button)findViewById( R.id.showpassbtn);
         createAcc=(Button)findViewById( R.id.createAccBtn);
         emailET=(EditText)findViewById( R.id.emailET);
         passwordET=(EditText)findViewById(R.id.passET);
         progressBar=(ProgressBar)findViewById(R.id.progressBar2);
+        //firebase
         auth=FirebaseAuth.getInstance();
-        if (auth.getCurrentUser() != null) {
-//            startActivity(new Intent(loginActivity.this, .class));
-//            finish();
-            Toast.makeText(getApplicationContext(), auth.getCurrentUser().getUid().toString(), Toast.LENGTH_LONG).show();
 
-        }
-        setContentView(R.layout.activity_login);
-        showpass.setText("Show");
-//        passwordET.setInputType(InputType.TYPE_TEXT_VARIATION_WEB_PASSWORD);
-
-
-
-        showpass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(showpass.getText()=="Show"){
-                    passwordET.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                    passwordET.setSelection(passwordET.getText().length());
-                    showpass.setText(" ");
-                }
-            }
-        });
+//        showpass.setText("Show");
+//        showpass.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(showpass.getText()=="Show"){
+//                    passwordET.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+//                    passwordET.setSelection(passwordET.getText().length());
+//                    showpass.setText(" ");
+//                }
+//            }
+//        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +83,7 @@ public class loginActivity extends AppCompatActivity {
                                         Toast.makeText(loginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(loginActivity.this, UserAccount.class);
+                                    Intent intent = new Intent(loginActivity.this, MapsActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -103,7 +95,6 @@ public class loginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(loginActivity.this, EmailSignUpinActivity.class));
-                finish();
             }
         });
     }

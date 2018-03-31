@@ -50,7 +50,7 @@ public class EmailSignUpinActivity extends AppCompatActivity  {
         auth=FirebaseAuth.getInstance();
         mStorage=FirebaseStorage.getInstance();
 
-        mRootReference = firebaseDatabase.getReference().child("users");
+        mRootReference = firebaseDatabase.getReference();
         emailEt= (EditText) findViewById(R.id.EmailET);
         passwordET=(EditText)findViewById(R.id.PassET);
         cPasswordET=(EditText)findViewById(R.id.CpassET);
@@ -61,10 +61,10 @@ public class EmailSignUpinActivity extends AppCompatActivity  {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email=emailEt.getText().toString().trim();
-                String password=passwordET.getText().toString().trim();
+                final String email=emailEt.getText().toString().trim();
+                final String password=passwordET.getText().toString().trim();
                 String confPass=cPasswordET.getText().toString().trim();
-                String name=userNameET.getText().toString().trim();
+                final String name=userNameET.getText().toString().trim();
                 if(TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter valid email address", Toast.LENGTH_SHORT).show();
                     return;
@@ -81,7 +81,7 @@ public class EmailSignUpinActivity extends AppCompatActivity  {
                     Toast.makeText(getApplicationContext(), "Enter Username", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(password!=confPass){
+                if(!password.equals(confPass)){
                     Toast.makeText(getApplicationContext(), "password didn't match", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -103,9 +103,7 @@ public class EmailSignUpinActivity extends AppCompatActivity  {
                             Toast.makeText(EmailSignUpinActivity.this, "Authentication failed." + task.getException(),
                                     Toast.LENGTH_SHORT).show();
                         } else {
-//                            final String uid = task.getResult().getUser().getUid();
-//
-//
+
 //                            StorageReference filepath = mStorage.child("user_profile").child(mImageUri.getLastPathSegment());
 //                            filepath.putFile(mImageUri).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
 //                                @Override
@@ -140,26 +138,17 @@ public class EmailSignUpinActivity extends AppCompatActivity  {
 //                                    }
 //
 //                                    //Add user data and image URL to firebase database
-
-
-
-
-
-
-
-
-
-                            startActivity(new Intent(EmailSignUpinActivity.this, loginActivity.class));
-                            finish();
+//                            mRootReference.child("users").child(auth.getCurrentUser().getUid()).child("User Name").child(name);
+//                            mRootReference.child("users").child(auth.getCurrentUser().getUid()).child("Email").child(email);
+//                            mRootReference.child("users").child(auth.getCurrentUser().getUid()).child("password").child(password);
+                            Toast.makeText(getApplicationContext(), "Logged in as "+auth.getCurrentUser().getEmail(), Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(EmailSignUpinActivity.this, UserAccount.class));
                         }
                     }
                 });
 
             }
         });
-
-
-
     }
 
     @Override
