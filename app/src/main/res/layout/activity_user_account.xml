@@ -26,27 +26,26 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
             android:background="@color/welcomeBackgrround"
-            app:srcCompat="@android:drawable/ic_menu_gallery" />
+            app:srcCompat="@drawable/usericon" android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/nameTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/userImage"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="45dp"
             android:layout_toEndOf="@+id/userImage"
-            android:hint="UserName"
+            android:hint="@string/username"
             android:textSize="22sp" />
 
         <TextView
             android:id="@+id/EmailTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/nameTV"
             android:layout_below="@+id/nameTV"
-            android:layout_marginTop="17dp"
-            android:hint="Email"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/userImage"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -56,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/userImage"
             android:layout_toEndOf="@+id/userImage"
-            android:text="Places"
+            android:text="@string/places"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <ListView
@@ -72,9 +71,9 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textView3"
             android:layout_alignParentEnd="true"
-            android:text="Edit"
+            android:layout_alignTop="@+id/userImage"
+            android:text="@string/edit"
             android:textAppearance="@style/TextAppearance.AppCompat" />
     </RelativeLayout>
 

@@ -4,12 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.prime.mycyclewaynew.Maps.SearchActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </RelativeLayout>
+    tools:context="com.example.prime.mycyclewaynew.Authentications.EditAccount">
 
 </android.support.constraint.ConstraintLayout>

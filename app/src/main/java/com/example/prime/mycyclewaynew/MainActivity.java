@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.prime.mycyclewaynew.Authentications.UserAccount;
 import com.example.prime.mycyclewaynew.Authentications.loginActivity;
 import com.example.prime.mycyclewaynew.Maps.MapsActivity;
 import com.google.firebase.auth.FirebaseAuth;

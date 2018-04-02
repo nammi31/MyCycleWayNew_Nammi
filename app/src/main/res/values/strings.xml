@@ -10,7 +10,7 @@
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="todo">TODO</string>
+
     <string name="title_activity_maps">Map</string>
     <string name="facebook_app_id">1549249921809499</string>
     <string name="fb_login_protocol_scheme">fb1549249921809499</string>
@@ -30,7 +30,7 @@
     <string name="button">Button</string>
 
     <string name="action_sign_in_short">Register</string>
-    <string name="email">Email</string>
+
     <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
     <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
     <string name="change_email">Change Email</string>
@@ -134,4 +134,9 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="edit">Edit</string>
+    <string name="email">Email</string>
+    <string name="username">UserName</string>
+    <string name="places">Places</string>
+    <string name="todo">TODO</string>
 </resources>

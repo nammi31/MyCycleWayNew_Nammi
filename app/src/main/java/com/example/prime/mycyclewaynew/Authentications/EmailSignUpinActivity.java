@@ -42,6 +42,7 @@ public class EmailSignUpinActivity extends AppCompatActivity  {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,9 +139,11 @@ public class EmailSignUpinActivity extends AppCompatActivity  {
 //                                    }
 //
 //                                    //Add user data and image URL to firebase database
-//                            mRootReference.child("users").child(auth.getCurrentUser().getUid()).child("User Name").child(name);
-//                            mRootReference.child("users").child(auth.getCurrentUser().getUid()).child("Email").child(email);
-//                            mRootReference.child("users").child(auth.getCurrentUser().getUid()).child("password").child(password);
+//
+                            String userID=auth.getCurrentUser().getUid();
+                            mRootReference.child("users").child(userID).child("email").setValue(email);
+                            mRootReference.child("users").child(userID).child("name").setValue(name);
+                            mRootReference.child("users").child(userID).child("password").setValue(password);
                             Toast.makeText(getApplicationContext(), "Logged in as "+auth.getCurrentUser().getEmail(), Toast.LENGTH_LONG).show();
                             startActivity(new Intent(EmailSignUpinActivity.this, UserAccount.class));
                         }

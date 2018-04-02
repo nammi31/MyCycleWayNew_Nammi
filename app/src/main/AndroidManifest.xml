@@ -54,7 +54,8 @@
         <activity
             android:name=".Firebase.SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".Maps.SearchActivity"></activity>
+        <activity android:name=".Maps.SearchActivity" />
+        <activity android:name=".Authentications.EditAccount"></activity>
     </application>
 
 </manifest>

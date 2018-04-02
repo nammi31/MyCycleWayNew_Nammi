@@ -40,6 +40,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 
+
+
+
+
+
 //    public String getAddress(double lat, double lng) {
 //        Geocoder geocoder = new Geocoder(MainActivity.this, Locale.getDefault());
 //        String add = new String();

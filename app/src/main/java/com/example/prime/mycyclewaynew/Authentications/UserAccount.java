@@ -1,5 +1,6 @@
 package com.example.prime.mycyclewaynew.Authentications;
 
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -10,8 +11,11 @@ import android.widget.TextView;
 
 import com.example.prime.mycyclewaynew.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class UserAccount extends AppCompatActivity {
 
@@ -36,7 +40,23 @@ public class UserAccount extends AppCompatActivity {
 
         auth=FirebaseAuth.getInstance();
         mRootReference = firebaseDatabase.getReference().child("users");
-        username.setText(auth.getCurrentUser().getDisplayName());
+        final String mUserId=auth.getCurrentUser().getUid();
+
+        mRootReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+//                Profile profile = dataSnapshot.getValue(Profile.class);
+//                System.out.println(profile.getUsername());
+                String name=dataSnapshot.child(mUserId).child("name").getValue().toString();
+                username.setText(name);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                System.out.println("The read failed: " + databaseError.getCode());
+            }
+        });
+
         emailaddress.setText(auth.getCurrentUser().getEmail());
 
 
