@@ -73,7 +73,7 @@ public class loginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
-                                // signed in user can be handled in the listener. progressBar.setVisibility(View.GONE);
+                                // signed in user can be handled in the listener. mProgressBar.setVisibility(View.GONE);
                                 progressBar.setVisibility(View.GONE);
                                 if (!task.isSuccessful()) {
                                     // there was an error
@@ -83,7 +83,7 @@ public class loginActivity extends AppCompatActivity {
                                         Toast.makeText(loginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(loginActivity.this, MapsActivity.class);
+                                    Intent intent = new Intent(loginActivity.this, UserAccount.class);
                                     startActivity(intent);
                                     finish();
                                 }

@@ -47,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
     }
     void openLogin(){
         Intent i = new Intent(this,loginActivity.class);
-        //finish();
+        finish();
         startActivity(i);
     }
     void openmapActivity(){
         Intent i = new Intent(this,MapsActivity.class);
-        //finish();
+        finish();
         startActivity(i);
     }
 
